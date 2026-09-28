@@ -1,0 +1,23 @@
+# Skuuy Edge Speedtest & Bufferbloat Lab (speed.skuuy.com)
+
+> speed.skuuy.com is a free, privacy-first internet speed testing suite, bufferbloat responsiveness auditor, and global gaming ping matrix.
+> Part of the decentralized Skuuy Tools ecosystem (https://skuuy.com).
+> Leverages multi-stream Web Workers querying Cloudflare Edge PoPs directly using HTTP/2 and HTTP/3 multiplexing.
+> 100% Free Forever, no tracking cookies, zero intrusive popups, zero connection throttling.
+
+## Diagnostic Capabilities
+
+- [Edge Speed Engine](https://speed.skuuy.com/): Real-time multi-stream download and upload throughput measurement without browser UI freezing.
+- [Bufferbloat Responsiveness Audit](https://speed.skuuy.com/#bufferbloat): Measures unloaded idle ping vs loaded ping under heavy download/upload saturation, assigning a letter grade (A+ through F) and RPM score per Apple & IETF RFC 8290 standards.
+- [Global Gaming & Cloud Cluster Matrix](https://speed.skuuy.com/#gaming): Parallel real-time latency and jitter benchmarks to 15+ major gaming hubs (Singapore, Tokyo, Hong Kong, Sydney, Frankfurt, London, US West, US East).
+- [Real-World Application Index](https://speed.skuuy.com/): Instant validation for 4K/8K 60fps streaming, Discord screen-sharing, Zoom multi-party conferences, and Cloud Gaming (GeForce NOW).
+- [Shareable Speed Certificate](https://speed.skuuy.com/): 1-click generation of high-contrast Neo-Brutalist speed cards and Markdown badges for GitHub profiles.
+
+## Parent Ecosystem
+
+- Master Portal: https://skuuy.com
+- Skuuy IP Intelligence: https://ip.skuuy.com
+- Skuuy 2FA Authenticator: https://2fa.skuuy.com
+- Skuuy Temp Mail: https://mail.skuuy.com
+- Skuuy Free Proxy: https://proxy.skuuy.com
+- Skuuy DNS Propagation: https://dns.skuuy.com
