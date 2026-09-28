@@ -13,6 +13,7 @@ import { AdminDashboard, DEFAULT_AD_SETTINGS } from './pages/AdminDashboard';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
 import { Disclaimer } from './pages/Disclaimer';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 import {
   TestPhase,
@@ -58,11 +59,20 @@ export const App: React.FC = () => {
     | 'privacy'
     | 'terms'
     | 'disclaimer'
-    | 'admin';
+    | 'admin'
+    | '404';
 
-  // Read initial tab from URL hash
+  // Read initial tab from URL pathname & hash
   const getInitialTab = (): ActiveTab => {
     if (typeof window !== 'undefined') {
+      const pathname = window.location.pathname.toLowerCase().replace(/\/$/, '') || '/';
+      if (pathname !== '/' && pathname !== '') {
+        if (pathname === '/privacy-policy') return 'privacy';
+        if (pathname === '/terms-of-service') return 'terms';
+        if (pathname === '/disclaimer') return 'disclaimer';
+        return '404';
+      }
+
       const hash = window.location.hash.toLowerCase();
       if (hash === '#admin') return 'admin';
       if (hash === '#bufferbloat') return 'bufferbloat';
@@ -72,6 +82,7 @@ export const App: React.FC = () => {
       if (hash === '#privacy') return 'privacy';
       if (hash === '#terms') return 'terms';
       if (hash === '#disclaimer') return 'disclaimer';
+      if (hash !== '' && hash !== '#') return '404';
     }
     return 'test';
   };
@@ -183,7 +194,9 @@ export const App: React.FC = () => {
     if (tab === 'admin') {
       window.location.hash = '#admin';
     } else if (tab === 'test') {
-      window.history.pushState(null, '', window.location.pathname);
+      window.history.pushState(null, '', '/');
+    } else if (tab === '404') {
+      // Keep current path for context
     } else {
       window.location.hash = `#${tab}`;
     }
@@ -396,6 +409,13 @@ export const App: React.FC = () => {
         {currentTab === 'disclaimer' && (
           <div className="animate-fade-in">
             <Disclaimer onBack={() => handleTabSelect('test')} />
+          </div>
+        )}
+
+        {/* Tab 10: 404 Not Found Page */}
+        {currentTab === '404' && (
+          <div className="animate-fade-in">
+            <NotFoundPage onBack={() => handleTabSelect('test')} />
           </div>
         )}
 

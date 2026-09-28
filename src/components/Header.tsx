@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 
 interface HeaderProps {
-  currentTab: 'test' | 'bufferbloat' | 'gaming' | 'capabilities' | 'docs' | 'privacy' | 'terms' | 'disclaimer' | 'admin';
+  currentTab: 'test' | 'bufferbloat' | 'gaming' | 'capabilities' | 'docs' | 'privacy' | 'terms' | 'disclaimer' | 'admin' | '404';
   onSelectTab: (tab: any) => void;
   onOpenCertificate?: () => void;
   isComplete: boolean;

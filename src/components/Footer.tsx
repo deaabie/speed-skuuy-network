@@ -168,18 +168,6 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
                   Network Disclaimer
                 </button>
               </li>
-              <li className="pt-2">
-                <a
-                  href="/llms.txt"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-black border border-slate-700 text-[10px] text-cyan-400 hover:text-cyan-300 font-mono transition-colors"
-                  title="Machine-readable context for AI models"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-                  <span>llms.txt (AI Ready)</span>
-                </a>
-              </li>
             </ul>
           </div>
         </div>

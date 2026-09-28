@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Endpoint Not Found | Skuuy Speed</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #0D0F17;
+      color: #FFFFFF;
+      font-family: 'JetBrains Mono', monospace, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .card {
+      background: #FF007F;
+      border: 4px solid #000000;
+      border-radius: 1.5rem;
+      padding: 3rem 2rem;
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 8px 8px 0px 0px #000000;
+    }
+    .badge {
+      display: inline-block;
+      background: #000000;
+      color: #FFE600;
+      font-size: 0.75rem;
+      font-weight: 900;
+      padding: 0.35rem 0.85rem;
+      border-radius: 0.5rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      border: 2px solid #000000;
+    }
+    .code-404 {
+      font-size: 5rem;
+      font-weight: 900;
+      line-height: 1;
+      color: #FFE600;
+      text-shadow: 4px 4px 0px #000000;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.4rem;
+      font-size: 0.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 1rem;
+      border: 3px solid #000000;
+      box-shadow: 3px 3px 0px 0px #000000;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px 0px #000000;
+    }
+    .btn-yellow {
+      background: #FFE600;
+      color: #000000;
+    }
+    .btn-yellow:hover {
+      background: #FFFFFF;
+    }
+    .btn-white {
+      background: #FFFFFF;
+      color: #000000;
+    }
+    .btn-white:hover {
+      background: #00F0FF;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Skuuy Diagnostic Edge</div>
+    <div class="code-404">404</div>
+    <h1>Endpoint Not Found</h1>
+    <p>The speedtest route or diagnostic asset you requested does not exist on Skuuy Speed edge network.</p>
+    <div class="actions">
+      <a href="/" class="btn btn-yellow">⚡ Return to Speedtest Lab</a>
+      <a href="https://skuuy.com" class="btn btn-white">🌐 Skuuy Ecosystem</a>
+    </div>
+  </div>
+</body>
+</html>

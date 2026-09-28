@@ -29,6 +29,21 @@ interface AdminDashboardProps {
   onUpdateAdSettings: (newSettings: AdSettings) => void;
 }
 
+// Precomputed SHA-256 hashes of master administrative passwords
+// Zero plaintext credentials exist in compiled JavaScript artifacts
+const VALID_ADMIN_HASHES = [
+  'e9ec0ac3944e601647544c40d7f0a1125e4aebe03484e9bea91fa97396fcb307',
+  '48e486b1972ce822d6614a5597b0ecdf1ac9b8922631ccf5266c2ada0ef76ffd'
+];
+
+async function computeSha256(str: string): Promise<string> {
+  const enc = new TextEncoder();
+  const buf = await crypto.subtle.digest('SHA-256', enc.encode(str));
+  return Array.from(new Uint8Array(buf))
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
 export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   onBack,
   adSettings,
@@ -46,23 +61,28 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       const savedToken = sessionStorage.getItem('skuuy_speed_admin_token');
       if (savedToken) {
         const payload = JSON.parse(atob(savedToken));
-        if (payload.authenticated && payload.expiresAt > Date.now()) {
+        if (
+          payload.authenticated &&
+          VALID_ADMIN_HASHES.includes(payload.authHash) &&
+          payload.expiresAt > Date.now()
+        ) {
           setIsAuthenticated(true);
         }
       }
     } catch {}
   }, []);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setAuthError(null);
 
-    // Master Ecosystem Admin Password
-    if (passwordInput === 'Prabowo789@@@!' || passwordInput === 'skuuy-admin-secret-2026') {
+    const inputHash = await computeSha256(passwordInput.trim());
+    if (VALID_ADMIN_HASHES.includes(inputHash)) {
       setIsAuthenticated(true);
       const token = btoa(
         JSON.stringify({
           authenticated: true,
+          authHash: inputHash,
           expiresAt: Date.now() + 1000 * 60 * 60 * 4
         })
       );
