@@ -82,6 +82,50 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
             <ul className="space-y-2 text-xs font-mono font-bold">
               <li>
                 <a
+                  href="https://skuuy.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white hover:text-[#FFE600] transition-colors flex items-center gap-1 font-bold"
+                >
+                  <span>→ Skuuy Master Portal</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://mcp.skuuy.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[#00E676] hover:text-emerald-300 transition-colors flex items-center gap-1 font-black"
+                >
+                  <span>Skuuy MCP Server (AI)</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://bin.skuuy.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-slate-300 hover:text-[#FFE600] transition-colors flex items-center gap-1"
+                >
+                  <span>Webhook & Request Bin</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://read.skuuy.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-slate-300 hover:text-[#FFE600] transition-colors flex items-center gap-1"
+                >
+                  <span>URL to Clean Markdown</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://dns.skuuy.com"
                   target="_blank"
                   rel="noreferrer"
