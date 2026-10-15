@@ -30,7 +30,7 @@ export const GuidesSection: React.FC = () => {
         'Active Queue Management algorithms like CAKE (Common Applications Kept Enhanced) and FQ-CoDel ensure critical gaming and voice packets skip download queues. A step-by-step overview for OpenWrt, MikroTik, and Asus routers.'
     },
     {
-      title: 'HTTP/3, QUIC & Cloudflare Anycast: Modern Speed Architecture',
+      title: 'HTTP/3, QUIC & Anycast: Modern Speed Architecture',
       category: 'Web Standards',
       icon: Zap,
       color: 'border-[#FFE600]',

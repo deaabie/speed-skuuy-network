@@ -43,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({
           Edge Engine:
         </span>
         <span className="font-extrabold text-[#FFE600]">
-          Cloudflare Anycast PoPs • HTTP/3 Multiplexing • Zero Throttling
+          Anycast Edge PoPs • HTTP/3 Multiplexing • Zero Throttling
         </span>
         <span className="hidden sm:inline text-slate-400">• Multi-Stream Web Worker</span>
 

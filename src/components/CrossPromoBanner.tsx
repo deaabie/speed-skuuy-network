@@ -46,7 +46,7 @@ export const CrossPromoBanner: React.FC = () => {
             Explore Skuuy Ecosystem Utilities
           </h3>
           <p className="text-xs text-slate-400 font-mono">
-            Zero-knowledge, open-source privacy and network diagnostics deployed on Cloudflare Edge.
+            Zero-knowledge, open-source privacy and network diagnostics deployed on the edge.
           </p>
         </div>
         <a

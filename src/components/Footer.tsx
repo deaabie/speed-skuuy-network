@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
           <div className="space-y-3 md:col-span-1">
             <SkuuyLogo size="sm" />
             <p className="text-xs text-slate-400 font-mono leading-relaxed pt-2">
-              Skuuy Speed is an edge-native internet speed test, bufferbloat responsiveness auditor, and multi-region gaming ping matrix running on Cloudflare PoPs.
+              Skuuy Speed is an edge-native internet speed test, bufferbloat responsiveness auditor, and multi-region gaming ping matrix running on edge PoPs.
             </p>
             <div className="pt-1">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#00E676] text-black text-[10px] font-mono font-black uppercase border border-black shadow-[2px_2px_0px_0px_#000]">

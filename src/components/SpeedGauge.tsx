@@ -64,7 +64,7 @@ export const SpeedGauge: React.FC<SpeedGaugeProps> = ({
           <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-black border-2 border-black text-xs font-mono shadow-[2px_2px_0px_0px_#000]">
             <Radio className="w-3.5 h-3.5 text-[#00E676] animate-pulse" />
             <span className="text-slate-400">Server: </span>
-            <span className="text-white font-bold">Cloudflare Anycast PoP</span>
+            <span className="text-white font-bold">Anycast Edge PoP</span>
           </div>
         </div>
       </div>
