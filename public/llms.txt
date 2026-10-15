@@ -1,8 +1,8 @@
 # Skuuy Edge Speedtest & Bufferbloat Lab (speed.skuuy.com)
 
 > speed.skuuy.com is a free, privacy-first internet speed testing suite, bufferbloat responsiveness auditor, and global gaming ping matrix.
-> Part of the decentralized Skuuy Tools ecosystem (https://skuuy.com).
-> Leverages multi-stream Web Workers querying Cloudflare Edge PoPs directly using HTTP/2 and HTTP/3 multiplexing.
+> Part of the open-source Skuuy Tools ecosystem (https://skuuy.com).
+> Leverages multi-stream Web Workers querying Anycast Edge PoPs directly using HTTP/2 and HTTP/3 multiplexing.
 > 100% Free Forever, no tracking cookies, zero intrusive popups, zero connection throttling.
 
 ## Diagnostic Capabilities

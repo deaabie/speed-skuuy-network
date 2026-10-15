@@ -35,7 +35,7 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onBack }) => {
             1. Zero Telemetry & Bandwidth Data Storage
           </h2>
           <p>
-            Skuuy Speed (https://speed.skuuy.com) executes internet throughput, loaded bufferbloat latency, and gaming ping evaluations entirely in real-time between your browser runtime and geographically distributed Cloudflare edge Anycast points of presence (PoPs). We do not record, store, sell, or analyze your bandwidth payload, download/upload throughput history, or IP addresses on persistent centralized databases.
+            Skuuy Speed (https://speed.skuuy.com) executes internet throughput, loaded bufferbloat latency, and gaming ping evaluations entirely in real-time between your browser runtime and geographically distributed Anycast edge points of presence (PoPs). We do not record, store, sell, or analyze your bandwidth payload, download/upload throughput history, or IP addresses on persistent centralized databases.
           </p>
         </section>
 

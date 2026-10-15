@@ -39,7 +39,7 @@ export async function fetchClientIpDetails(): Promise<ClientIpDetails> {
       });
       return {
         ip: map.ip || '127.0.0.1',
-        isp: 'Cloudflare Connected ISP',
+        isp: 'Anycast Edge ISP',
         asn: 'AS13335',
         city: map.colo || 'Edge PoP',
         country: map.loc || 'Global',
